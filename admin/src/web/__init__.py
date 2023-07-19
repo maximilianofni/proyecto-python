@@ -6,7 +6,9 @@ from src.web.helpers import handlers
 
 def create_app():
     app = Flask(__name__)
-
+    # configuracion de la bd
+    database.init_app(app)
+    app.secret_key= "holamundo"
     #ruta al home
     @app.route("/")
     def home():
