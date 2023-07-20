@@ -1,6 +1,6 @@
 ## PAGINA WEB REALIZADA EN PYTHON
 
-# Descripcion del Proyecto
+## Descripcion del Proyecto
 
 Sitio web para la seleccion de perfiles de rubros IT.  El sitio tiene una parte pública donde los usuarios pueden realizar la búsqueda de empleos de los diferentes rubros IT. Además, el sitio cuenta con una parte privada donde una persona RECLUTADORA se registra (o inicia sesión si ya se registró previamente) publica los empleos y gestiona a los usuarios que se postularon a los empleos publicados.
 
