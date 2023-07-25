@@ -31,3 +31,8 @@ poetry add flask@latest
 
  Se realizo un codigo para mostrar un "hola mundo" en la web.
 
+ ![msedge_rGfqmDprR2](https://github.com/maximilianofni/proyecto-python/assets/17895688/2303e66c-2faf-4709-a269-5159c0764226)
+
+ 
+
+
