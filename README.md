@@ -26,3 +26,8 @@ poetry add flask@latest
 **Nota: Para ingresar al entorno virtual ejecutar el comando :**
 
  poetry shell
+
+ # Codigo
+
+ Se realizo un codigo para mostrar un "hola mundo" en la web.
+
