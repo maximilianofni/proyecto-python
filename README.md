@@ -1,38 +1,31 @@
 
-## Rama feature creacion-proyecto
+## Rama feature creacion de la vista login
 
-Pre-condicion:
+# creacion de carpetas
 
-* Instalar poetry ejecutando el comando : 
+ - se creo las carpetas static y dentro de la carpeta css e img para guardar los archivos css e imagenes
+ - tambien se creo la carpeta templates para crear los archivos html como el layout como principal utilizando bootstrap y una carpeta auth para crear la vista del login.
 
-pip install poetry
+ # se creo la ruta en el archivo app.py 
 
-# Descripcion de la rama
+  - Es decir, se creo la funcion login y en la funcion home el redireccionamient a la vista del login como se muestra en el codigo abajo
 
-En esta rama se creo el proyecto con poetry ejecutando el comando:
+    #ruta al home
+    @app.route("/")
+    def home():
+    return redirect(url_for("login"))
+    
+    #ruta al login
+    @app.route("/login", methods=["GET" , "POST"])
+    def login():
+        if request.method == "POST":
+            print(request.form['username'])
+            print(request.form['password'])
+            return render_template("auth/login.html")
+        else:
+            return render_template("auth/login.html")
 
-poetry new "nombre del proyecto"
 
-Una vez instalado el proyecto , ingresar en el proyecto ejecutando el comando:
 
-cd "nombre del proyecto"
-
-# Depedencias
-
-se instalo la dependencia de flask ejecutando el comando: 
-
-poetry add flask@latest
-
-**Nota: Para ingresar al entorno virtual ejecutar el comando :**
-
- poetry shell
-
- # Codigo
-
- Se realizo un codigo para mostrar un "hola mundo" en la web.
-
- ![msedge_rGfqmDprR2](https://github.com/maximilianofni/proyecto-python/assets/17895688/2303e66c-2faf-4709-a269-5159c0764226)
-
- 
 
 
