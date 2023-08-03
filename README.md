@@ -10,6 +10,8 @@
 
   - Es decir, se creo la funcion login y en la funcion home el redireccionamient a la vista del login como se muestra en el codigo abajo
 
+    ```
+    
     #ruta al home
     @app.route("/")
     def home():
@@ -24,8 +26,5 @@
             return render_template("auth/login.html")
         else:
             return render_template("auth/login.html")
-
-
-
-
-
+    
+```
