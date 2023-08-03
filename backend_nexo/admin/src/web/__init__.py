@@ -6,7 +6,7 @@ from flask import Flask
 from flask import render_template, request, redirect , url_for
 from admin.src.core.config import config
 from admin.src.core.models.usuario_model import Usuario
-#from admin.src.web.helpers import handlers
+
 
 def create_app(env="development", static_folder="static"):
     app = Flask(__name__, static_folder=static_folder)
@@ -15,11 +15,13 @@ def create_app(env="development", static_folder="static"):
     database.init_app(app)
     app.secret_key= "holamundo"
     app.config["SESSION_TYPE"] = "filesystem"
+
+    
     #ruta al home
     @app.route("/")
     def home():
         return redirect(url_for("login"))
-
+    
     #ruta al login
     @app.route("/login", methods=["GET" , "POST"])
     def login():
@@ -30,10 +32,10 @@ def create_app(env="development", static_folder="static"):
         else:
             return render_template("auth/login.html")
 
+    #para la configuracion de la bd
     @app.cli.command(name="resetdb")
     def resetdb():
         database.reset_db()
-    #funcion para mostrar un mensaje para cuando el usuario ingrese una url invalida o modulo invalido
-    #app.register_error_handler(404, handlers.not_found_error)
+  
 
     return app

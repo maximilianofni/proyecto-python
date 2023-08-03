@@ -2,8 +2,10 @@ from admin.src.web import create_app
 from pathlib import Path
 
 
-static_folder = Path(__file__).parent.joinpath("public")
-app = create_app(static_folder=static_folder)
+#static_folder = Path(__file__).parent.joinpath("public")
+#app = create_app(static_folder=static_folder)
+
+app = create_app()
 
 def main():
     app.run()
